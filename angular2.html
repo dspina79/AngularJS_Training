@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html data-ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Testing 2</title>
+</head>
+<body>
+    <script src="angular2_controller.js"></script>
+    <div class="container" data-ng-controller="SimpleController">
+        Enter a filter: <input data-ng-model="filter.name" type="text">
+        <h3>Names</h3>
+        <ul>
+            <li data-ng-repeat="customer in customers | filter:filter.name | orderBy:'lastName'">
+                {{customer.lastName}}, {{customer.firstName}} ({{customer.location | uppercase}})
+
+            </li>
+
+        </ul>
+
+
+
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+</body>
+</html>

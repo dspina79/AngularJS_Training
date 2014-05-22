@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html data-ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Scratchpad 1</title>
+
+
+
+</head>
+<body>
+
+<h2>My Second Angular Page</h2>
+
+
+<div class="container" data-ng-init="individuals=[{name: 'Dave', city: 'New York City'},
+                {name: 'Kate', city: 'Greece'}, {name: 'Owen', city: 'Rochester'}]">
+    Name: <input type="text" data-ng-model="filter.name" />
+
+
+    <h3>Individuals</h3>
+    <ul>
+        <li data-ng-repeat="individual in individuals | filter:filter.name | orderBy:'city'">{{individual.name}} - {{individual.city}}</li>
+
+    </ul>
+
+</div>
+
+<script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+<script type="text/javascript"></script>
+
+</body>
+</html>

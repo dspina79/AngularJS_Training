@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<style type="text/css">
+
+    .container {
+
+        background-color: lightpink;
+        font-family: monospace;
+    }
+
+    .container .innerItem {
+        background-color:  lightskyblue;
+        margin-top:10px;
+    }
+
+</style>
+
+    <script src="angular2_test_controller.js"></script>
+    <div class="container" data-ng-controller="CustomerController">
+
+        <h2>Sample Search Using Controllers</h2>
+        Enter a search term: <input data-ng-model="filter.searchTerm"> {{filter.searchTerm}}
+
+        <div class="innerItem" data-ng-repeat="customer in customers | filter:filter.searchTerm">
+            Individual: {{customer.lastName}}, {{customer.firstName}} <br>
+            Date of Birth: {{customer.dateOfBirth}}
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+</body>
+</html>
