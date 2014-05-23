@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="angular3Module">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular 3 Test Review</title>
+</head>
+<body>
+
+<style type="text/css">
+
+    .container{
+        border:  1px solid black;
+        background-color: lightgreen;
+        font-size: 1.2em;
+        font-family:  monospace;
+    }
+
+    .individualBox
+    {
+        background-color: lightblue;
+        margin-top: 20px;
+    }
+
+</style>
+
+    <h1>Team Members</h1>
+    Use the following text box to isolate team members: <input type="text" data-ng-model="search.all">
+    <div class="container" data-ng-controller="PersonController">
+
+        <div class="individualBox" data-ng-repeat="person in people | filter:search.all | orderBy:'lastName'">
+            <strong>Individual Name:</strong>&nbsp;{{person.lastName}}, {{person.firstName}}<br>
+            <strong>Title:</strong>&nbsp;{{person.title}}
+        </div>
+
+    </div>
+    End of list...
+
+    <script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script src="angular3_test_module.js"></script>
+</body>
+</html>
