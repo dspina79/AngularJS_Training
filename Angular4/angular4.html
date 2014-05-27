@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html data-ng-app="angular4App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular4 Demo</title>
+</head>
+<body>
+
+    <div class="container" data-ng-controller="EmployeeController">
+        <h2>List of Employees</h2>
+        <ul>
+            <li data-ng-repeat="employee in employees">
+                {{employee.lastName}}, {{employee.firstName}}
+            </li>
+
+        </ul>
+
+    </div>
+
+    <script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script type="text/javascript" src="angular4_module.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="container">
+
+    <h3>View 1</h3>
+    <ul>
+
+        <li data-ng-repeat="employee in employees | orderBy:'lastName'">
+            {{employee.firstName}} {{employee.lastName}}
+        </li>
+
+    </ul>
+</div>

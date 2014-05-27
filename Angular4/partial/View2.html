@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Search Employees</h2>
+    Enter a name: <input data-ng-model="filter.search" type="text">
+    <br>Searching for {{filter.search}}
+
+    <ul>
+        <li data-ng-repeat="employee in employees | filter:filter.search | orderBy:'lastName'">
+            {{employee.lastName}}, {{employee.firstName}}
+        </li>
+
+    </ul>
+
+</div>

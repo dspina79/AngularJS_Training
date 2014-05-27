@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-ng-app="angular5Mod">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular5 Testing</title>
+</head>
+<body>
+
+<div class="container" data-ng-controller="DataController">
+
+   <h2>List of People</h2>
+    <ul>
+        <li data-ng-repeat="person in people">
+            {{person.firstName}} {{person.lastName}}
+        </li>
+
+    </ul>
+
+    <h4>Add a New Person</h4>
+    First Name: <input type="text" data-ng-model="newPerson.firstName">
+    Last Name: <input type="text" data-ng-model="newPerson.lastName">
+    <input type="button" value="Add" data-ng-click="addPerson()">
+
+    <h2>List of Pets</h2>
+    <ul>
+        <li data-ng-repeat="pet in pets">
+            {{pet.name}} ({{pet.type}})
+        </li>
+
+    </ul>
+</div>
+
+
+<script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script type="text/javascript" src="angular5Module.js"></script>
+</body>
+</html>
