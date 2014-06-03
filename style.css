@@ -1,0 +1,12 @@
+.container, input {
+
+    font-size: 1.3em;
+    font-family: sans-serif;
+
+    border: 3px solid darkgreen;
+}
+
+.headerText
+{
+    color: green;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html data-ng-app="angular7mod">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+
+<link type="text/css" href="../style.css" rel="stylesheet">
+<div class="container" data-ng-controller="PetController">
+
+<h1>Pets</h1>
+
+    <header-text></header-text>
+<ul>
+    <li data-ng-repeat="pet in pets | orderBy:'name'">{{pet.name}} - {{pet.animalType}}</li>
+
+</ul>
+    <h3>Add a Pet</h3>
+    <instruction-text></instruction-text>
+    Pet Name: <input type="text" data-ng-model="newPet.name"><br>
+    Animal Type: <input type="text" data-ng-model="newPet.animalType"><br>
+    <input type="button" value="Add" data-ng-click="addPet()">
+
+
+</div>
+
+
+<script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script type="text/javascript" src="angular7mod.js"></script>
+</body>
+</html>

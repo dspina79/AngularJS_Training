@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-ng-app="angular6Mod">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div class="container" data-ng-controller="DataController">
+
+    <h2>Data from Server</h2>
+
+    <ul>
+        <li data-ng-repeat="contact in contacts">
+            {{contact.Id}}: {{contact.FirstName}} {{contact.LastName}} ({{contact.Location}})
+        </li>
+
+    </ul>
+
+</div>
+
+<script type=" text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script type="text/javascript" src="angular6Mod.js"></script>
+
+</body>
+</html>
